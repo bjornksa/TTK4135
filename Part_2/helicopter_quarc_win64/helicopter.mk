@@ -129,7 +129,7 @@ RELATIVE_PATH_TO_ANCHOR   = ..
 MODELREF_TARGET_TYPE      = NONE
 
 #-- Support for parallel builds
-START_DIR         = C:\Users\bjornksa\Documents\helilab\template_problem_2
+START_DIR         = F:\TTK4135\Part_2
 MASTER_ANCHOR_DIR = 
 
 #-- Support multi-instance code

@@ -93,7 +93,7 @@ x3  = [zero_padding; x3; zero_padding];
 x4  = [zero_padding; x4; zero_padding];
 
 %% PART 3 - optimal control w/ feedback
-Q_lqr = diag([1, 1, 1, 1]);
+Q_lqr = diag([1000, 1, 1, 1]);
 R_lqr = 1;
 [K, S, n] = dlqr(A1, B1, Q_lqr, R_lqr);
 %disp(K);

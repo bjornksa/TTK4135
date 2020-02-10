@@ -11,6 +11,7 @@ A1 = [1 0.25 0 0;
       0 1 -0.25*K_2 0;
       0 0 1 0.25;
       0 0 0.25*K_1*K_pp 1-0.25*K_1*K_pd];
+  
 B1 = [0; 0; 0; 0.25*K_1*K_pp];
 
 % Number of states and inputs
@@ -18,7 +19,7 @@ mx = size(A1,2); % Number of states (number of columns in A)
 mu = size(B1,2); % Number of inputs(number of columns in B)
 
 % Initial values
-x1_0 = pi;                             % Lambda
+x1_0 = pi;                              % Lambda
 x2_0 = 0;                               % r
 x3_0 = 0;                               % p
 x4_0 = 0;                               % p_dot
@@ -59,7 +60,7 @@ Aeq =  gen_aeq(A1,B1,N,mx,mu);         % Generate A, hint: gen_aeq
 %beq = zeros(size(Aeq,1),1);
 beq_1 = A1*x0;
 beq = Aeq*z0;
-beq(1) = beq_1(1);          % Generate b
+beq(1) = beq_1(1);                     % Generate b
 
 %% Solve QP problem with linear model
 tic
